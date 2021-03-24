@@ -14,8 +14,8 @@ def flip(l):
     l = l.replace("-","+")
     l = l.replace("x","-")
     return l
-    
-for i in range(int(input())):
+
+def solve():
     s = input()
     count = 0 
     while len(s)> 0:
@@ -23,3 +23,6 @@ for i in range(int(input())):
         s = flip(s)
         count +=1 
     print("Case #"+str(i+1)+": "+ str(count-1))
+
+for i in range(int(input())):
+    solve()

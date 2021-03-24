@@ -1,7 +1,9 @@
 #cp template 
 
 def solve():
-    pass
+    result = 0 
+    print("Case #"+str(i+1)+": "+ str(result))
 
 for i in range(int(input())):
     solve()
+
