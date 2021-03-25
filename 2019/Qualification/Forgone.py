@@ -9,7 +9,6 @@ def check(num):
                 l.append(len(num)-1)
             else:
                 l.append(-(i)-1)
-
     return l 
 
 def findSum(num, l):
