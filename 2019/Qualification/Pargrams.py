@@ -3,7 +3,7 @@ import math
 
 def primeFactor(n):
     n2 = 0
-    for i in range(3, int(math.sqrt(n)), 2):
+    for i in range(3, int(math.sqrt(n))+1, 2):
         if n % i == 0:
             n2 = i 
             n = int(n/n2)
@@ -21,13 +21,20 @@ def solve():
     second = primeFactor(l[1])
     result =""
 
+
     if first[0] in second:
         encryplist.append(first[1])
         encryplist.append(first[0])
-    for x in second:
-        if x not in encryplist:
-            encryplist.append(x)
-    
+    elif first[1] in second:
+        encryplist.append(first[0])
+        encryplist.append(first[1])
+    if first == second:
+        encryplist.append(encryplist[0])
+    else:
+        for x in second:
+            if x not in encryplist:
+                encryplist.append(x)
+        
     for k in range(2, length):
         encryplist.append(int(l[k]/encryplist[-1]))
 
